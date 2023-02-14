@@ -1,0 +1,14 @@
+{
+  "name": "iframe-resize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Joozty/iframe-resize.git",
+  "author": "Jozef Harag <32jojo32@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "dev": "http-server"
+  }
+}

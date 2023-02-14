@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<h1>Cross origin iframe</h1>
+		<script>
+			if (window.innerHeight === 0 || window.innerWidth === 0) {
+				console.log('Initial window innerWidth or innerHeight is zero', {
+					innerWidth: window.innerWidth,
+					innerHeight: window.innerHeight,
+					documentReadyState: document.readyState,
+				})
+			}
+
+			window.addEventListener('resize', (event) => {
+				console.log('Resize event fired', event, {
+					innerWidth: window.innerWidth,
+					innerHeight: window.innerHeight,
+					documentReadyState: document.readyState,
+				})
+				console.log('resize happened')
+			})
+
+			setTimeout(() => {
+				console.log('Size after set timeout', {
+					innerWidth: window.innerWidth,
+					innerHeight: window.innerHeight,
+					documentReadyState: document.readyState,
+				})
+			})
+
+			window.addEventListener('DOMContentLoaded', (event) => {
+				console.log('DOM fully loaded and parsed', {
+					innerWidth: window.innerWidth,
+					innerHeight: window.innerHeight,
+					documentReadyState: document.readyState,
+				})
+			})
+		</script>
+	</body>
+</html>
